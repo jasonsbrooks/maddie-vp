@@ -22,11 +22,16 @@ $(document).ready(function() {
       }, 1000);
   });
 
+  $('#buttons').click(function() {
+    window.open('https://www.facebook.com/maddieforvp', '_blank'); 
+  });
+
   $('.platform-point').click(function(){
-     $(this).next().slideToggle();
+     $(this).next().slideToggle(function() {
+      jQuery(window).trigger('resize').trigger('scroll');
+     });
    });
 
   $('.platform-section').hide();
 
 });
-

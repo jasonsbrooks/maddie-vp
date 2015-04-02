@@ -18,9 +18,15 @@ $(document).ready(function() {
       event.preventDefault();
       var target = "#" + this.getAttribute('data-target');
       $('html, body').animate({
-          scrollTop: $(target).offset().top - 30
+          scrollTop: $(target).offset().top - 50
       }, 1000);
   });
+
+  $('.platform-point').click(function(){
+     $(this).next().slideToggle();
+   });
+
+  $('.platform-section').hide();
 
 });
 
